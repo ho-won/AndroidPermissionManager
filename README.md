@@ -24,8 +24,32 @@ dependencies {
 }
 ```
   
+  
 How do I use it?
 -------------------
+
+```
+    private lateinit var permissionManager: PermissionManager
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+	permissionManager = PermissionManager(this,
+            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), // required permissions
+            arrayOf(Manifest.permission.POST_NOTIFICATIONS), // optional permissions
+            onGranted = {
+                // required permissions complete
+            },
+            onDenied = {
+                // required permissions denied
+            })
+    }
+    
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        permissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+```
 
 
 License
