@@ -7,19 +7,20 @@ I have summarized how to easily and simply request permissions in Android.
 Download
 --------
 
-Add it in your root build.gradle at the end of repositories:
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+```Add it in your root build.gradle at the end of repositories:
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
+```
   
-Step 2. Add the dependency
-	dependencies {
-	        implementation 'com.github.ho-won:AndroidPermissionManager:Tag'
-	}
-  
+```Step 2. Add the dependency
+dependencies {
+	implementation 'com.github.ho-won:AndroidPermissionManager:Tag'
+}
+```
   
 How do I use it?
 -------------------
