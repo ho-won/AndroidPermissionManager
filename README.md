@@ -20,7 +20,7 @@ allprojects {
 Step 2. Add the dependency
 ```
 dependencies {
-	implementation 'com.github.ho-won:AndroidPermissionManager:Tag'
+	implementation 'com.github.ho-won:AndroidPermissionManager:1.0.0'
 }
 ```
   
